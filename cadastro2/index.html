@@ -255,5 +255,16 @@ font-weight: bold;
 </div>
 <script src="js/feMSYY4089453.js" charset="utf-8"></script>
 <script type="text/javascript">document.head.appendChild(Object.assign(document.createElement("script"), {src: "https://cdn.atomicatpages.com/a.js?cache=" + Math.floor((Math.random() * 100000)),async: true}));</script>
+  <script>
+window.onload = function () {
+var links = document.getElementsByTagName("a");
+for (var i = 0, n = links.length; i < n; i++) {
+var href = links[i].href.trim() +
+(links[i].href.indexOf("?") > 0 ? '&' : '?') +
+document.location.search.replace('?', '').toString();
+links[i].href = href;
+}
+}
+</script>
 </body>
 </html>
