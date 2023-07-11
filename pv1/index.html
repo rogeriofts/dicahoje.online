@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliador Premiado</title>
+</head>
+<body>
+    
+<nav class="nav">
+<img src="logo.png">
+<div class="saldo">
+    <span id="saldo-txt">R$ 20,00</span>
+</div>
+</nav>
+
+<div class="conteudo">
+
+<div class="headline">
+<h3>Aproveite, você já ganhou R$20,00 para começar!</h3>
+</div>
+
+
+
+<div class="box">
+<h1>Qual você prefere?</h1>
+<span>Toque encima da sua escolha</span>
+<div class="opcoes">
+<img src="nike.png">
+<span>x</span>
+<img src="adidas.png"></div>
+<h2>Escolha qual você prefere e ganhe dinheiro respondendo a pesquisa da marca!</h2>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    (function ($) {
+        $('a').each(function () {
+            let href = $(this).attr("href");
+            if (href === undefined || href.indexOf("#") >= 0 || href.indexOf("api.whatsapp") >= 0) return true;
+            // if (href.indexOf("perfectpay") == -1) return true; 
+            let search_params = document.location.search.replace('?', '');
+            let urlFinal = href + (href.indexOf("?") > 0 ? '&' : '?') + search_params.toString();
+            $(this).attr("href", urlFinal);
+        });
+    })(jQuery);
+</script>
+
+
+<script>
+    // Selecionar o elemento com a classe "opcoes"
+const opcoesElement = document.querySelector('.opcoes');
+
+// Selecionar as imagens dentro do elemento "opcoes"
+const imagens = opcoesElement.querySelectorAll('img');
+
+// Adicionar um ouvinte de evento de clique para cada imagem
+imagens.forEach(imagem => {
+  imagem.addEventListener('click', () => {
+    window.location.href = 'perguntas.html';
+  });
+});
+</script>
+
+</div>
+</body>
+</html>
