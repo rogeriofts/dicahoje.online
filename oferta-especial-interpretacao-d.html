@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<style id="" media="all">@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrFJA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLGT9V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDD4V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts.gstatic.com/s/quicksand/v31/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkP8o18E.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts.gstatic.com/s/quicksand/v31/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkBgv18E.ttf) format('truetype');
+}
+</style>
+<link rel="icon" type="image/png" href="wp-content/uploads/2022/02/icon-1.png" />
+<style>html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+      }
+      ol,
+      ul {
+        list-style: none;
+      }
+      blockquote,
+      q {
+        quotes: none;
+      }
+      blockquote:before,
+      blockquote:after,
+      q:before,
+      q:after {
+        content: "";
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      * {
+        font-family: "Quicksand", sans-serif !important;
+      }
+    </style>
+<style>p {
+        text-align: center;
+      }
+
+      .green-header {
+        display: flex;
+        background-color: #4bbf73;
+        color: white;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        padding: 10px 5%;
+      }
+
+      .stop {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: red;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .offer p {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .offer span {
+        font-weight: bold;
+      }
+
+      .woman {
+        width: 30%;
+        margin: 50px 35%;
+      }
+
+      .big_warning {
+        font-size: 65px;
+        font-weight: bold;
+        color: red;
+      }
+
+      .big_text {
+        font-size: 45px;
+        font-weight: bold;
+      }
+
+      .holder {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .super_big_text {
+        font-size: 105px;
+        font-weight: bold;
+      }
+
+      .buy {
+        display: flex;
+        background-color: #4bbf73;
+        font-size: 70px;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        margin: 20px;
+        border-radius: 10px;
+        padding: 10px 10px;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .timer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .minutes {
+        background-color: red;
+        font-size: 70px;
+        font-weight: bold;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        margin-right: 10px;
+      }
+
+      .seconds {
+        background-color: red;
+        font-size: 70px;
+        font-weight: bold;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      @media (max-width: 1000px) {
+        .minutes,
+        .seconds {
+          font-size: 5vw;
+        }
+        .big_warning {
+          font-size: 10vw;
+        }
+
+        .big_text {
+          font-size: 8vw;
+        }
+
+        .super_big_text {
+          font-size: 15vw;
+        }
+
+        .buy {
+          font-size: 5vw;
+        }
+
+        .offer {
+          padding: 0px 5%;
+        }
+
+        .green-header {
+          font-size: 15px;
+        }
+
+        .woman {
+          width: 90%;
+          margin: 50px 5%;
+        }
+
+        iframe {
+          height: 300px;
+        }
+      }
+    </style>
+<title>Oferta Especial Interpretação</title>
+
+<script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-5TM2BH5");
+    </script>
+
+</head>
+<body>
+<div class="green-header">
+<p>
+Parabéns! Sua compra foi aprovada. Obrigado! Em até 10
+minutinhos o acesso chega em seu whats e no email também!
+</p>
+</div>
+<div class="stop">
+<img src="wp-content/uploads/2023/05/img_stop.png" />
+<p class="warning">NÃO FECHE ESSA TELA AINDA, leia com atenção:</p>
+</div>
+<div class="offer">
+<p>
+Agora como cliente, você já faz parte da nossa COMUNIDADE
+PEDAGÓGICA, e tenho aqui uma <span>OPORTUNIDADE ÚNICA</span> para você
+APROVEITAR.
+</p>
+<p>
+Deixa eu explicar: COMPRANDO UM SEGUNDO MATERIAL (válido apenas para
+esse momento, nessa tela*), você ao invés de 1 número, ganha 3 números
+para o sorteio que acontece todo dia 5 do mês!
+</p>
+<p>
+O sorteio se refere a 3 cursos reconhecidos pela ABED e materiais
+exclusivos.
+</p>
+<p>
+<span>
+VOCÊ APROVEITA PARA LEVAR MAIS UM MATERIAL TESTADO E APROVADO EM SALA
+E TRIPLICA AS SUAS CHANCES DE GANHAR!
+</span>
+</p>
+</div>
+<img class="woman" src="wp-content/uploads/2023/05/Criativos-Afiliados-3-31.jpg" />
+<p class="big_warning">Interpretação de Texto Completo</p>
+<p class="big_text">218 PÁGINAS</p>
+<div class="holder">
+<iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=7plrsalk9s" width="700" height="500" seamless="seamless" scrolling="no" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+</div>
+<div class="offer">
+<p>
+Com esse material, seus alunos/filhos, serão capazes de extrair
+informações relevantes, compreender conceitos e enriquecer sua
+compreensão sobre todos os tipos de textos.
+</p>
+<div class="timer">
+<div class="minutes">00</div>
+<div class="seconds">00</div>
+</div>
+<p>Aproveite agora!</p>
+<p>Tempo em que essa oportunidade estará disponível!</p>
+<p>de 47,00</p>
+</div>
+<p class="super_big_text">POR 1X DE R$ 14,90</p>
+<a href="https://pepper.com.br/checkout/index.html?p=92862&o=106672" class="buy">COMPRAR E ACESSAR JÁ</a
+    >
+<div class="offer">
+<p>
+*O valor poderá sofrer alterações a qualquer momento, sob nossos
+critérios.
+</p>
+</div>
+<p class="rights">
+TODOS OS DIREITOS RESERVADOS – ATIVIDADES ANOS INICIAIS Ⓡ 2020 – 2023
+</p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script defer="defer">
+      function r(a) {
+        if (
+          "undefined" !== $.type(a.data) &&
+          "array" === $.type(a.data) &&
+          2 === a.data.length
+        )
+          try {
+            for (
+              ;
+              (el = $('*:contains("' + a.data[0] + '")').last()) &&
+              el &&
+              el.length;
+
+            )
+              console.log(a.data, el),
+                el.html(el.html().replace(a.data[0], a.data[1]));
+            for (
+              ;
+              (lk = $('a[href$="' + a.data[0] + '"]:last')) && lk && lk.length;
+
+            )
+              console.log(a.data, lk),
+                lk.attr("href", a.data[1]),
+                lk.attr(
+                  "target",
+                  a.data[0].toLowerCase().indexOf("modal") > -1
+                    ? "_self"
+                    : "_top"
+                );
+            for (
+              ;
+              (im = $('img[src$="' + a.data[0] + '"]')) && im && im.length;
+
+            )
+              console.log(a.data, im), im.attr("src", a.data[1]);
+          } catch (t) {
+            console.log("jquery.error", t),
+              (document.body.innerHTML = document.body
+                .getInnerHTML()
+                .replaceAll(a.data[0], a.data[1]));
+          }
+      }
+      window.addEventListener("message", r, !1);
+    </script>
+
+<script>
+      const minutes = document.querySelector(".minutes");
+      const seconds = document.querySelector(".seconds");
+
+      minutes.textContent = "15 minutos";
+      seconds.textContent = "01 segundos";
+
+      setInterval(() => {
+        if (parseInt(seconds.textContent) - 1 === 0) {
+          seconds.textContent = "59 segundos";
+          minutes.textContent = `${parseInt(minutes.textContent) - 1} minutos`;
+        } else {
+          seconds.textContent = `${
+            parseInt(seconds.textContent) - 1 < 10 ? "0" : ""
+          }${parseInt(seconds.textContent) - 1} segundos`;
+        }
+      }, 1000);
+    </script>
+
+<script>
+      !(function (e) {
+        if (!window.pintrk) {
+          window.pintrk = function () {
+            window.pintrk.queue.push(Array.prototype.slice.call(arguments));
+          };
+          var n = window.pintrk;
+          (n.queue = []), (n.version = "3.0");
+          var t = document.createElement("script");
+          (t.async = !0), (t.src = e);
+          var r = document.getElementsByTagName("script")[0];
+          r.parentNode.insertBefore(t, r);
+        }
+      })("https://s.pinimg.com/ct/core.js");
+      pintrk("load", "2614116044729", { em: "<user_email_address>" });
+      pintrk("page");
+    </script>
+<noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        alt=""
+        src="https://ct.pinterest.com/v3/?event=init&amp;tid=2614116044729&amp;pd%5Bem%5D=%3Chashed_email_address%3E&amp;noscript=1"
+      />
+    </noscript>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-711754923"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "AW-711754923");
+    </script>
+<script>
+      !(function (w, d, t) {
+        w.TiktokAnalyticsObject = t;
+        var ttq = (w[t] = w[t] || []);
+        (ttq.methods = [
+          "page",
+          "track",
+          "identify",
+          "instances",
+          "debug",
+          "on",
+          "off",
+          "once",
+          "ready",
+          "alias",
+          "group",
+          "enableCookie",
+          "disableCookie",
+        ]),
+          (ttq.setAndDefer = function (t, e) {
+            t[e] = function () {
+              t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+            };
+          });
+        for (var i = 0; i < ttq.methods.length; i++)
+          ttq.setAndDefer(ttq, ttq.methods[i]);
+        (ttq.instance = function (t) {
+          for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++)
+            ttq.setAndDefer(e, ttq.methods[n]);
+          return e;
+        }),
+          (ttq.load = function (e, n) {
+            var i = "https://analytics.tiktok.com/i18n/pixel/events.js";
+            (ttq._i = ttq._i || {}),
+              (ttq._i[e] = []),
+              (ttq._i[e]._u = i),
+              (ttq._t = ttq._t || {}),
+              (ttq._t[e] = +new Date()),
+              (ttq._o = ttq._o || {}),
+              (ttq._o[e] = n || {});
+            n = document.createElement("script");
+            (n.type = "text/javascript"),
+              (n.async = !0),
+              (n.src = i + "?sdkid=" + e + "&lib=" + t);
+            e = document.getElementsByTagName("script")[0];
+            e.parentNode.insertBefore(n, e);
+          });
+
+        ttq.load("CC4GFORC77UFTO4NLBEG");
+        ttq.page();
+      })(window, document, "ttq");
+    </script>
+
+<noscript><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5TM2BH5"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+
+</body>
+</html>
